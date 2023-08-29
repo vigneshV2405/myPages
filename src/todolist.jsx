@@ -2,7 +2,7 @@ import React from "react"
 
 function TodoList(props){
     var [todoList,setTodo] = React.useState(props.ar)
-    function addTodo(){
+    function addTodo(){ 
         var ntd = document.getElementById('inp').value
         setTodo([...todoList,ntd])
     }
