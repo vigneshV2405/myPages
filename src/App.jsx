@@ -4,29 +4,31 @@ import './App.css';
 import Counter from './counter.jsx'
 import TodoList from './todolist.jsx'
 import axios from 'axios';
+import Child from './childComp.jsx'
 
 function App() {
-  var [countries,setC] = React.useState([])
-  React.useEffect(()=>{
-    axios.get("https://restcountries.com/v3.1/all")
-    .then((res)=>{
-      setC(res.data)
-      console.log(res.data)
-    })
+  var [x,setX] = React.useState(109)
+  var [y,setY] = React.useState(654)
+  function incx(){
+    setX(x+1)
+  }
+  function incy(){
+    setY(y+1)
+  }
+  var ar = React.useMemo(()=>{
+    return [1,2,3]
   },[])
   return (
-    <>
-    <h1>Welcome</h1>
-    {/* <Counter x={50}></Counter>
-    <Counter x={10}></Counter> */}
-    {/* <TodoList title={"Todo"} id={"inp1"} ar={['get clothes','buy shoes','book tickets']}></TodoList>
-    <TodoList title={"convo"} id={"inp2"} ar={['pack bags']}></TodoList> */}
-    <ul>
-      {countries.map((country)=>{
-        return <li>{country.name.common}</li>
-      })}
-    </ul>
-    </>
+    <div>
+      <h1>Hello</h1>
+      <h1>Counter:{x}</h1>
+      <h1>Counter:{y}</h1>
+      <button onClick={()=>{incx()}}>increase X</button>
+      <button onClick={()=>{incy()}}>increase Y</button>
+      <br></br>
+      <br></br>
+      <Child x={ar}></Child>
+    </div>
   )
 }
 
