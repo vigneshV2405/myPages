@@ -1,5 +1,4 @@
 import React from "react";
-import Child from './childComp'
 
 function Ren(){
     var [x,setX] = React.useState(109)
@@ -22,7 +21,6 @@ function Ren(){
             <button onClick={()=>{incy()}}>increase Y</button>
             <br></br>
             <br></br>
-            <Child x={ar}></Child>
         </div>
     )
 }
