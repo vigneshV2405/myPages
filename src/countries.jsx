@@ -46,7 +46,6 @@ function Countrieslist() {
               <b style={{ fontSize: "15px" }}>{country.name.common}</b>
               <img src={country.flags[1]} style={{ width: "200px" }} />
               <b>population:{country.population}</b>
-              <h1>dc</h1>
             </div>
           );
         })}
