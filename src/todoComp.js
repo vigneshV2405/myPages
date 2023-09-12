@@ -14,7 +14,7 @@ function Todolist(props){
             {
                 props.td.todos.map((todo,i)=>{
                     return (
-                        <li>
+                        <li key={i}>
                             {todo}
                             <button onClick={()=>{props.dispatch({type:"DELETETODO",payload:i})}}>delete</button>
                         </li>

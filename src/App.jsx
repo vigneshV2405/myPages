@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import Counter from "./counterComp";
 import Todolist from "./todoComp";
+import CountriesComp from "./CountriesComp";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <h1>Hello</h1>
         <Counter></Counter>
         <Todolist></Todolist>
+        <CountriesComp></CountriesComp>
       </div>
     </Provider>
   );
