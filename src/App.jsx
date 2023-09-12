@@ -1,13 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Counter from './counter.jsx'
-import TodoList from './todolist.jsx'
-import axios from 'axios';
-import Child from './childComp.jsx'
+import { Outlet,Link } from 'react-router-dom';
 
 function App() {
-  
+  return (
+    <div className='box'>
+        <h1>Home</h1>
+        <Link to="/contact">contact us</Link>&nbsp;&nbsp;&nbsp;
+        <Link to="/courses">our courses</Link>&nbsp;&nbsp;&nbsp;
+        <Link to="/countries">Countries</Link>
+        <Outlet></Outlet>
+    </div>
+  )
 }
 
 export default App;
