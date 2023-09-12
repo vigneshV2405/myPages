@@ -1,17 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Counter from './counter.jsx'
-import TodoList from './todolist.jsx'
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./store/store";
+import Counter from "./counterComp";
+import Todolist from "./todoComp";
 
 function App() {
   return (
-    <>
-    <h1>Welcome</h1>
-    <Counter x={50}></Counter>
-    <Counter x={10}></Counter>
-    <TodoList ar={['get clothes','buy shoes','book tickets']}></TodoList>
-    </>
-  )
+    <Provider store={store}>
+      <div className="box">
+        <h1>Hello</h1>
+        <Counter></Counter>
+        <Todolist></Todolist>
+      </div>
+    </Provider>
+  );
 }
 
 export default App;
