@@ -6,7 +6,7 @@ function todoReducer(state=initialState,action){
     if(action.type==='ADDTODO'){
         return {...state,todos:[...state.todos,action.payload]}
     }
-    if(action.type==='RESET'){
+    if(action.type==='RESETtodos'){
         return {...state,todos:[...initialState.todos]}
     }
     if(action.type==='DELETETODO'){
