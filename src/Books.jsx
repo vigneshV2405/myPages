@@ -6,6 +6,7 @@ function Books() {
     var [ newBook , setNewBook ] = React.useState({})
     var [ editFlag , setEF ] = React.useState(false)
     var [ editId , setId ] = React.useState(0)
+    var [ genres , setGenres ] = React.useState([])
     useEffect(()=>{
         genBooks()
     },[])
@@ -42,11 +43,34 @@ function Books() {
         setId(0)
         setEF(false)
     }
+    function updateCheckbox(e){
+        if(e.target.checked==true){
+            var add = [...genres]
+            add.push(e.target.value)
+            setGenres([...add])
+            console.log(add)
+        }
+        if(e.target.checked==false){
+            var remove = [...genres]
+            remove.splice(remove.indexOf(e.target.value),1)
+            setGenres([...remove])
+            console.log(remove)
+        }
+        
+    }
   return (
     <div>
         <div style={{padding:'20px'}}>
             Title: <input id="title" onChange={(e)=>{setNewBook({...newBook,"title":e.target.value})}} /><br/>
-            Author: <input id="author" onChange={(e)=>{setNewBook({...newBook,"author":e.target.value})}} /><br/><br/>
+            Author: <input id="author" onChange={(e)=>{setNewBook({...newBook,"author":e.target.value})}} /><br/>
+            Availability:   <input onChange={(e)=>{newBook.Availability=e.target.value}} type="radio" name="availability" value="pdf"/>&nbsp;online pdf&nbsp;&nbsp;&nbsp;
+                            <input onChange={(e)=>{newBook.Availability=e.target.value}} type="radio" name="availability" value="printed"/>&nbsp;printed<br/>
+            Genre:  <input type="checkbox" onChange={(e)=>{updateCheckbox(e)}} value="Thriller"/> Thriller&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" onChange={(e)=>{updateCheckbox(e)}} value="Technology" /> technology&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" onChange={(e)=>{updateCheckbox(e)}} value="Biography" /> biography&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" onChange={(e)=>{updateCheckbox(e)}} value="Mystery" /> mystery&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" onChange={(e)=>{updateCheckbox(e)}} value="Comedy" /> Comedy
+            <br/><br/>
             {
                 !editFlag?(<button onClick={()=>{addBook()}} >Add book</button>):(<button onClick={()=>{updateBook()}} >Update details</button>)
             }
