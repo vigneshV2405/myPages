@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import Countries from './Countries';
 import Countrydetails from './Countrydetails';
+import Books from './Books';
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
                         element:<Countrydetails></Countrydetails>
                     }
                 ]
+            },
+            {
+                path:'/books',
+                element:<Books></Books>
             }
         ]
     }

@@ -9,7 +9,7 @@ function Navbar() {
             <Link to="/countries">Countries</Link>&nbsp;&nbsp;&nbsp;&nbsp;
             <Link to='/books'>Books</Link>
         </div>
-        <div className='box'>
+        <div className='box' style={{backgroundColor:'pink'}}>
             <Outlet></Outlet>
         </div>
     </div>
