@@ -7,6 +7,9 @@ export const booksApi = createApi({
     getAllBooks: builder.query({
       query: () => `/books`,
     }),
+    getBookById: builder.query({
+      query: (id) => `/books/${id}`
+    }),
     addNewBook: builder.mutation({
         query:(n) => {
             return {
@@ -15,6 +18,15 @@ export const booksApi = createApi({
                 body: n
             }
         }
+    }),
+    editBookById: builder.mutation({
+      query: ({id,n})=>{
+        return {
+          url:`/books/${id}`,
+          method:'PUT',
+          body:n
+        }
+      }
     }),
     deleteBook: builder.mutation({
         query: (i)=>{
@@ -27,4 +39,4 @@ export const booksApi = createApi({
   }),
 })
 
-export const { useGetAllBooksQuery , useAddNewBookMutation, useDeleteBookMutation , useLazyGetAllBooksQuery } = booksApi
+export const { useGetAllBooksQuery , useAddNewBookMutation, useDeleteBookMutation , useGetBookByIdQuery , useEditBookByIdMutation , useLazyGetAllBooksQuery } = booksApi

@@ -18,24 +18,62 @@
   },
   "books": [
     {
-      "title": "reactjs",
-      "author": "ghjk",
+      "title": "ReactJS",
+      "author": "Praveen",
+      "availability": "pdf",
+      "genre": [
+        "comedy",
+        "technology"
+      ],
       "id": 1
     },
     {
-      "title": "angulardfghjbvg",
-      "author": "Chari",
+      "title": "Angular",
+      "author": "Chariiii",
+      "availability": "printed",
+      "genre": [
+        "horror",
+        "comedy"
+      ],
       "id": 2
     },
     {
       "id": 3,
       "title": "nodejs",
-      "author": "puri"
+      "author": "puri",
+      "genre": [
+        "mystery"
+      ],
+      "availability": "pdf"
     },
     {
       "title": "Python",
       "author": "Vignesh",
-      "id": 4
+      "id": 4,
+      "genre": [
+        "horror",
+        "comedy"
+      ],
+      "availability": "printed"
+    },
+    {
+      "title": "SQL",
+      "author": "emo",
+      "availability": "pdf",
+      "genre": [
+        "technology"
+      ],
+      "id": 5
+    },
+    {
+      "title": "DBMS",
+      "author": "DDP",
+      "availability": "pdf",
+      "genre": [
+        "horror",
+        "technology"
+      ],
+      "id": 6
     }
   ]
 }

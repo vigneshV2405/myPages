@@ -7,6 +7,7 @@ import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import Countries from './Countries';
 import Countrydetails from './Countrydetails';
 import Books from './Books';
+import Booksedit from './Booksedit';
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
             },
             {
                 path:'/books',
-                element:<Books></Books>
+                element:<Books></Books>,
+            },
+            {
+                path:"/editBook/:id",
+                element:<Booksedit></Booksedit>
             }
         ]
     }
