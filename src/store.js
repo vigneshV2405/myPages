@@ -1,17 +1,16 @@
 import {configureStore} from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import { countriesApi } from './services/countries';
-import { booksApi } from './services/books';
+import { productsApi } from './services/products'; 
+
 
 
 export const store = configureStore({
     reducer:{
-        [countriesApi.reducerPath]: countriesApi.reducer,
-        [booksApi.reducerPath]: booksApi.reducer
+        [productsApi.reducerPath]: productsApi.reducer,
     },
 
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat(countriesApi.middleware,booksApi.middleware)
+        getDefaultMiddleware().concat(productsApi.middleware)
 })
 
 setupListeners(store.dispatch)

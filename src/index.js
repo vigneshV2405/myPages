@@ -4,10 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
-import Countries from './Countries';
-import Countrydetails from './Countrydetails';
-import Books from './Books';
-import Booksedit from './Booksedit';
+import Products from './Products';
+import Cart from './Cart';
 
 const router = createBrowserRouter([
     {
@@ -15,23 +13,16 @@ const router = createBrowserRouter([
         element:<App></App>,
         children:[
             {
-                path:'/countries',
-                element:<Countries></Countries>,
+                path:'/products',
+                element:<Products></Products>,
                 children:[
                     {
-                        path:'/countries/:cname',
-                        element:<Countrydetails></Countrydetails>
+                        path:'/products/cart/',
+                        element:<Cart></Cart>
                     }
                 ]
             },
-            {
-                path:'/books',
-                element:<Books></Books>,
-            },
-            {
-                path:"/editBook/:id",
-                element:<Booksedit></Booksedit>
-            }
+        
         ]
     }
 ])

@@ -3,7 +3,6 @@ import "./App.css";
 import React from "react";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import Countries from "./Countries";
 import Navbar from "./Navbar";
 
 function App() {

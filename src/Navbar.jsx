@@ -6,10 +6,9 @@ function Navbar() {
     <div>
         <div className='box'>
             <Link to="/">Home</Link>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to="/countries">Countries</Link>&nbsp;&nbsp;&nbsp;&nbsp;
-            <Link to='/books'>Books</Link>
+            <Link to="/products">Products</Link>&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
-        <div className='box' style={{backgroundColor:'pink'}}>
+        <div className='border m-2 p-2'>
             <Outlet></Outlet>
         </div>
     </div>
