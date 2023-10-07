@@ -1,9 +1,7 @@
-import {combineReducers,createStore} from 'redux'
-import counterReducer from './reducers/counterReducer'
-import todoReducer from './reducers/todoReducer'
-import CountriesReducer from './reducers/countriesReducer'
+import {combineReducers , createStore } from 'redux';
+import counterReducer from './reducers/counterReducer';
+import Todoreducer from './reducers/todoReducer';
 
-const reducer = new combineReducers({c:counterReducer,td:todoReducer,cr:CountriesReducer})
-const store = createStore(reducer)
-
-export default store
+const reducers = new combineReducers({ct:counterReducer,tds:Todoreducer})
+const store = createStore(reducers)
+export default store;
