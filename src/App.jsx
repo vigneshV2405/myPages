@@ -2,15 +2,14 @@ import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 import { Provider } from "react-redux";
+import Pokemon from "./Pokemon";
 import { store } from "./store";
-import Countries from "./Countries";
-import Navbar from "./Navbar";
 
 function App() {
   return (
     <Provider store={store}>
       <div>
-        <Navbar></Navbar>
+        <Pokemon></Pokemon>
       </div>
     </Provider>
   );

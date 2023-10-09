@@ -4,35 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
-import Countries from './Countries';
-import Countrydetails from './Countrydetails';
-import Books from './Books';
-import Booksedit from './Booksedit';
 
 const router = createBrowserRouter([
     {
         path:'/',
-        element:<App></App>,
-        children:[
-            {
-                path:'/countries',
-                element:<Countries></Countries>,
-                children:[
-                    {
-                        path:'/countries/:cname',
-                        element:<Countrydetails></Countrydetails>
-                    }
-                ]
-            },
-            {
-                path:'/books',
-                element:<Books></Books>,
-            },
-            {
-                path:"/editBook/:id",
-                element:<Booksedit></Booksedit>
-            }
-        ]
+        element:<App></App>
     }
 ])
 
