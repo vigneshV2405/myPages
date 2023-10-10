@@ -1,16 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './counter.jsx'
-import TodoList from './todolist.jsx'
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { firebaseConfig } from './shared/firebase';
+import Login from './features/Login';
+import {Provider} from 'react-redux';
+import { store } from './shared/store';
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+
 
 function App() {
   return (
-    <>
-    <h1>Welcome</h1>
-    <Counter x={50}></Counter>
-    <Counter x={10}></Counter>
-    <TodoList ar={['get clothes','buy shoes','book tickets']}></TodoList>
-    </>
+    <Provider store={store}>
+      <div className='App'>
+        <h1>Welcome</h1>
+        <Login></Login>
+      </div>
+    </Provider>
   )
 }
 
