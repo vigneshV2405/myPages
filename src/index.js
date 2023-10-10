@@ -10,10 +10,16 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-  },
-  {
-    path:'/myfeed/:id',
-    element:<Myfeed></Myfeed>
+    children: [
+      {
+        path:'',
+        element:<Login></Login>
+      },
+      {
+        path:'/myfeed/:id',
+        element:<Myfeed></Myfeed>
+      }
+    ]
   }
 ])
 

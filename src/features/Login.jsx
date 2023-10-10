@@ -1,32 +1,38 @@
 import React from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { useAddnewUserMutation, useGetallusersQuery } from '../services/media';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { useAddnewUserMutation, useGetallusersQuery, useLazyGetallusersQuery } from '../services/media';
 import { useNavigate } from 'react-router-dom';
+import { auth } from '../shared/firebase';
 const provider = new GoogleAuthProvider();
 
 function Login() {
-    //var { isLoading , data } = useGetallusersQuery();
     var [ adduser ] = useAddnewUserMutation();
     var { isLoading , data } = useGetallusersQuery();
+    var [ refresh ] = useLazyGetallusersQuery();
     const navigate = useNavigate();
 
     function login(){
-        const auth = getAuth();
         signInWithPopup(auth,provider)
         .then((result)=>{
             const credential = GoogleAuthProvider.credentialFromResult(result);
+            console.log("auth::",auth)
+            console.log("provider::",provider)
+            console.log(result)
             const user = result.user;
             var userDup = data.filter((x)=>{
                 return (x.mailId===user.email)
             })
+            console.log(userDup)
             if(userDup.length>0){
                 alert('this email is already in use click ok to continue with this mail')
+                navigate(`/myfeed/${userDup[0].id}`)
             }
-            else{
+            if(userDup.length==0){
                 var newUser = {Uname:user.displayName,mailId:user.email,image:user.photoURL}
                 adduser(newUser).then((res)=>{
-                    console.log(res)
-                    navigate(`/myfeed/${res.data.id}`)
+                    refresh();
+                    console.log(res);
+                    navigate(`/myfeed/${res.data.id}`);
                 })
             }
             
@@ -36,7 +42,7 @@ function Login() {
     }
 
   return (
-    <div>
+    <div className='App'>
         <table align='center' className=''>
             <thead></thead>
             <tbody>
