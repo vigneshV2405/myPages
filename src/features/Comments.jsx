@@ -8,26 +8,32 @@ function Comments(props) {
         console.log(data)
     }
   return (
-    <div>
+    <div className='p-3 pt-0'>
+        <div className=''>
+            <button className='btn mt-0'>
+                <span className='bi bi-hand-thumbs-up'></span>&nbsp;
+                <span>Like</span>
+            </button>
+            <button className="btn mt-0" type="button" data-bs-toggle="collapse" data-bs-target={`#collapseExample${id}`} aria-expanded="false" aria-controls="collapseExample">
+                Comment
+            </button>
+        </div>
+        <hr/>
         {
             !isLoading &&
-            <div>
-                {
-                    data.map((comment)=>{
-                        return (
-                            <div className='border p-2 bg-secondary text-white rounded'>
-                                <b>{comment.name}</b><br/>
-                                <span>{comment.body}</span>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        }
-        {
-            isLoading &&
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+            <div className="collapse mt-2" id={`collapseExample${id}`}>
+                <div className="">
+                    {
+                        data.map((comment)=>{
+                            return (
+                                <div className='bg-secondary-subtle p-3 pb-0 mb-2 rounded-4'>
+                                    <b>{comment.name}</b>
+                                    <p>{comment.body}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         }
     </div>
