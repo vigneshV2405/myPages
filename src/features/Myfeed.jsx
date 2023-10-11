@@ -3,11 +3,11 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom'
 import { useGetallpostsQuery, useGetuserbyIdQuery } from '../services/media';
 import { getAuth, signOut } from 'firebase/auth';
+import Post from './Post';
 
 
 function Myfeed() {
     var { id } = useParams();
-    //var [ user , setUser ] = useState(null);
     var { isLoading:is2 , data:posts } = useGetallpostsQuery();
     var { isLoading , data:user } = useGetuserbyIdQuery(id);
     const auth = getAuth();
@@ -47,28 +47,26 @@ function Myfeed() {
                 </button>
             </div>
             <div className="tab-content" id="v-pills-tabContent">
-                <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                    {
-                        is2 &&
-                        <div class="spinner-border" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    }
-                    {
-                        !is2 &&
-                        <div>
-                            {
-                                posts.map((post)=>{
-                                    return (
-                                        <div className='shadow-lg p-3 mb-5 bg-body rounded'>
-                                            <b>{post.title.toUpperCase()}</b><br/>
-                                            <p>{post.body}</p>
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    }
+                <div className="tab-pane fade show active ms-0" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                    <div>
+                        {
+                            is2 &&
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        }
+                        {
+                            !is2 &&
+                            <div className='d-flex flex-wrap justify-content-around'>
+                                {
+                                    posts.map((post)=>{
+                                        return <Post post={post}></Post>
+                                    })
+                                }
+                            </div>
+                        }
+                    </div>
+                    <div></div>
                 </div>
                 <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
                     {

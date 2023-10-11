@@ -7,7 +7,7 @@ const provider = new GoogleAuthProvider();
 
 function Login() {
     var [ adduser ] = useAddnewUserMutation();
-    var { isLoading , data } = useGetallusersQuery();
+    var { data } = useGetallusersQuery();
     var [ refresh ] = useLazyGetallusersQuery();
     const navigate = useNavigate();
 
