@@ -1,17 +1,22 @@
-import logo from "./logo.svg";
-import "./App.css";
-import React from "react";
-import { Provider } from "react-redux";
-import Pokemon from "./Pokemon";
-import { store } from "./store";
+
+import './App.css';
+import Header from './shared/Header';
+import { Outlet } from 'react-router-dom';
+
+import { initializeApp } from "firebase/app";
+import {getAuth} from 'firebase/auth'
+import { firebaseConfig } from './firebase';
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
 
 function App() {
   return (
-    <Provider store={store}>
+    
       <div>
-        <Pokemon></Pokemon>
+        <Header></Header>
+        <Outlet></Outlet>
       </div>
-    </Provider>
+
   );
 }
 
