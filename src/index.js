@@ -4,12 +4,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "../node_modules/bootstrap/dist/js/bootstrap.min";
 import { createRoot } from "react-dom/client";
-import Home from '../features/Home/Home';
+import Home from './features/Home/Home';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import AdminDashBoard from './features/AdminDashboad/AdminDashBoard';
+import AdminDashBoard from './features/AdminDashboad/AdminDashboad';
 import AddHospital from './features/AdminDashboad/AddHospital';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
