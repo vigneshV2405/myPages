@@ -15,6 +15,7 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import AddBed from './features/AdminDashboad/AddBed';
 import HospitalDetails from './features/Hospital/HospitalDetails';
+import Discharge from './features/AdminDashboad/Discharge';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
           {
             path:"/admindashboard/addBed",
             element:<AddBed></AddBed>
+          },
+          {
+            path:"/admindashboard/discharge",
+            element:<Discharge></Discharge>
           },
         ]
       },

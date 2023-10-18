@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAddBedsMutation, useGetHospitalDetailsByIdQuery, useGetadminsQuery, useLazyGetHospitalDetailsByIdQuery } from '../../services/hospApi';
 import _ from 'lodash';
-
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from '../../firebase';
 import { useDispatch, useSelector } from 'react-redux';

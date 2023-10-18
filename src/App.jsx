@@ -11,12 +11,10 @@ export const auth = getAuth(app);
 
 function App() {
   return (
-    
       <div>
         <Header></Header>
         <Outlet></Outlet>
       </div>
-
   );
 }
 
