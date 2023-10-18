@@ -16,6 +16,7 @@ import { store } from './app/store';
 import AddBed from './features/AdminDashboad/AddBed';
 import HospitalDetails from './features/Hospital/HospitalDetails';
 import Discharge from './features/AdminDashboad/Discharge';
+import BedDetails from './features/Hospital/BedDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
       {
         path:"/details/:id",
         element:<HospitalDetails/>
+      },
+      {
+        path:"admindashboard/discharge/details/:id",
+        element: <BedDetails></BedDetails>
+
       },
       {
         path:"",

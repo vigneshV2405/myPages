@@ -53,28 +53,7 @@ function HospitalDetails() {
         setBeds(bedsByCategory)
     }
 
-    function bookIt(){
-        if(isAdmin){
-            console.log(user)
-        }
-        if(!isAdmin){
-            var temp = Object.values(beds).flat(1);
-            temp = temp.map((b)=>{
-                if(b.bedId===selectedBed){
-                    return {...b,patients:[...b.patients,{useremail:user.mailId,name:user.name}]}
-                }
-                else{
-                    return b
-                }
-            })
-            data = {...data,beds:[...temp]}
-            updateBeds(data).then(()=>{
-                alert("Update Success...");
-                getHospitalDetails(p.id)
-            })
-        }
-    }
-
+    
     function updateHospital(){
 
         if(user){
@@ -85,7 +64,7 @@ function HospitalDetails() {
                 var temp = Object.values(beds).flat(1);
                 temp = temp.map((b)=>{
                     if(b.bedId===selectedBed){
-                        return {...b,patients:[...b.patients,{useremail:user.mailId,name:user.name,status:'ongoing'}]}
+                        return {...b,patients:[...b.patients,{email:user.mailId,name:user.name,status:'ongoing'}]}
                     }
                     else{
                         return b
@@ -121,7 +100,7 @@ function HospitalDetails() {
                     var temp = Object.values(beds).flat(1);
                     temp = temp.map((b)=>{
                         if(b.bedId===selectedBed){
-                            return {...b,patients:[...b.patients,{useremail:user.email,name:user.displayName,status:'ongoing'}]}
+                            return {...b,patients:[...b.patients,{email:user.email,name:user.displayName,status:'ongoing'}]}
                         }
                         else{
                             return b
@@ -142,7 +121,7 @@ function HospitalDetails() {
         var temp = Object.values(beds).flat(1);
         temp = temp.map((b)=>{
             if(b.bedId===selectedBed){
-                return {...b,patients:[...b.patients,{username:name,mobile:mobile,status:'ongoing'}]}
+                return {...b,patients:[...b.patients,{name:name,mobile:mobile,status:'ongoing'}]}
             }
             else{
                 return b
