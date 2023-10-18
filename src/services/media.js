@@ -29,6 +29,15 @@ export const MediaApi = createApi({
     }),
     getcommentsbyId: builder.query({
       query:(id)=>`comments?postId=${id}`
+    }),
+    addcomment: builder.mutation({
+      query: (b)=>{
+        return {
+          url:``,
+          method:"POST",
+          body:b
+        }
+      }
     })
   }),
 })
@@ -41,6 +50,6 @@ export const {
     useLazyGetallusersQuery,
     useGetuserbyIdQuery,
     useGetallpostsQuery,
-    useGetcommentsbyIdQuery
-
+    useGetcommentsbyIdQuery,
+    useAddcommentMutation,
  } = MediaApi
