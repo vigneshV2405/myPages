@@ -3,9 +3,12 @@ import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { useAddnewUserMutation, useGetallusersQuery, useLazyGetallusersQuery } from '../services/media';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../shared/firebase';
+import { changeUser } from './loginSlice';
+import { useDispatch } from 'react-redux';
 const provider = new GoogleAuthProvider();
 
 function Login() {
+    const dispatch = useDispatch();
     var [ adduser ] = useAddnewUserMutation();
     var { data } = useGetallusersQuery();
     var [ refresh ] = useLazyGetallusersQuery();
@@ -22,6 +25,7 @@ function Login() {
             var userDup = data.filter((x)=>{
                 return (x.mailId===user.email)
             })
+            dispatch(changeUser({name:user.displayName,email:user.email}))
             console.log(userDup)
             if(userDup.length>0){
                 alert('this email is already in use click ok to continue with this mail')

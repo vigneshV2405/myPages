@@ -33,7 +33,7 @@ export const MediaApi = createApi({
     addcomment: builder.mutation({
       query: (b)=>{
         return {
-          url:``,
+          url:`comments`,
           method:"POST",
           body:b
         }
@@ -52,4 +52,5 @@ export const {
     useGetallpostsQuery,
     useGetcommentsbyIdQuery,
     useAddcommentMutation,
+    useLazyGetcommentsbyIdQuery
  } = MediaApi

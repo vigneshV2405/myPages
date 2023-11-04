@@ -1,0 +1,605 @@
+{
+    "hotels": [
+      {
+        "hotelName": "Novotel",
+        "image": "https://dynl.mktgcdn.com/p/R2LkCUBGKdTagcg-QPaQTLZ7amBuTtg2fIqyh034hqQ/600x450.jpg",
+        "area": "Lakdikapool",
+        "reviews": [],
+        "roomTypes": [
+          {
+            "roomType": "Non A/C",
+            "price": "1900"
+          },
+          {
+            "roomType": "A/C",
+            "price": "4500"
+          },
+          {
+            "roomType": "Luxurious",
+            "price": "8999"
+          }
+        ],
+        "rooms": [
+          {
+            "status": "open",
+            "roomType": "A/C",
+            "roomPrice": "7654",
+            "patients": [],
+            "roomId": "A/C1"
+          },
+          {
+            "status": "occupied",
+            "roomType": "A/C",
+            "roomPrice": "7654",
+            "patients": [
+              {
+                "guestName": "Varikolu Vignesh",
+                "email": "vigneshvarikolu133@gmail.com"
+              }
+            ],
+            "roomId": "A/C2"
+          },
+          {
+            "status": "occupied",
+            "roomType": "A/C",
+            "roomPrice": "546378",
+            "patients": [],
+            "roomId": "A/C3"
+          },
+          {
+            "status": "open",
+            "roomType": "A/C",
+            "roomPrice": "546378",
+            "patients": [],
+            "roomId": "A/C4"
+          },
+          {
+            "status": "occupied",
+            "roomType": "A/C",
+            "roomPrice": "546",
+            "patients": [],
+            "roomId": "A/C5"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "54643",
+            "patients": [
+              {
+                "guestName": "Varikolu Vignesh",
+                "email": "vigneshvarikolu133@gmail.com"
+              }
+            ],
+            "roomId": "Luxurious1"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "54643",
+            "patients": [],
+            "roomId": "Luxurious2"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "5464343",
+            "patients": [],
+            "roomId": "Luxurious3"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [],
+            "roomId": "Luxurious4"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [],
+            "roomId": "Luxurious5"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [],
+            "roomId": "Luxurious6"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [
+              {
+                "guestName": "Vignesh Varikolu",
+                "email": "vigneshvarikolu111@gmail.com"
+              }
+            ],
+            "roomId": "Luxurious7"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [],
+            "roomId": "Luxurious8"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [
+              {
+                "guestName": "Varikolu Vignesh",
+                "email": "vigneshvarikolu133@gmail.com"
+              }
+            ],
+            "roomId": "Luxurious9"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [
+              {
+                "guestName": "Vignesh Varikolu",
+                "email": "vigneshvarikolu111@gmail.com"
+              }
+            ],
+            "roomId": "Luxurious10"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "7654",
+            "patients": [
+              {
+                "guestName": "Varikolu Vignesh",
+                "email": "vigneshvarikolu133@gmail.com"
+              }
+            ],
+            "roomId": "Luxurious11"
+          }
+        ],
+        "id": 1
+      },
+      {
+        "hotelName": "Taj Hotel",
+        "image": "https://www.tajhotels.com/content/dam/luxury/hotels/Taj_Krishna_Hyderabad/images/master/Fasade3X2.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
+        "area": "Begumpet",
+        "reviews": [],
+        "roomTypes": [
+          {
+            "roomType": "A/C",
+            "price": "5000"
+          },
+          {
+            "roomType": "Luxurious",
+            "price": "10000"
+          }
+        ],
+        "rooms": [
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "20000",
+            "patients": [],
+            "roomId": "Luxurious1"
+          },
+          {
+            "status": "open",
+            "roomType": "A/C",
+            "roomPrice": "2999",
+            "patients": [],
+            "roomId": "A/C1"
+          },
+          {
+            "status": "open",
+            "roomType": "A/C",
+            "roomPrice": "2999",
+            "patients": [],
+            "roomId": "A/C2"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "546",
+            "patients": [],
+            "roomId": "Luxurious2"
+          }
+        ],
+        "id": 2
+      },
+      {
+        "hotelName": "Marriott Hotel and Convention center",
+        "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/463616145.jpg?k=6154e794c8c3d415d0e1590036cbf1def43acd71e795ae0a171d226429ed02d8&o=&hp=1",
+        "area": "Hi-Tech city",
+        "reviews": [],
+        "roomTypes": [
+          {
+            "roomType": "Non A/C",
+            "price": "2000"
+          },
+          {
+            "roomType": "A/C",
+            "price": "4500"
+          },
+          {
+            "roomType": "Luxurious",
+            "price": "8999"
+          }
+        ],
+        "rooms": [
+          {
+            "status": "open",
+            "roomType": "Non A/C",
+            "roomPrice": "2000",
+            "patients": [],
+            "roomId": "Non A/C1"
+          },
+          {
+            "status": "open",
+            "roomType": "Non A/C",
+            "roomPrice": "2000",
+            "patients": [],
+            "roomId": "Non A/C2"
+          },
+          {
+            "status": "open",
+            "roomType": "Non A/C",
+            "roomPrice": "2000",
+            "patients": [],
+            "roomId": "Non A/C3"
+          },
+          {
+            "status": "open",
+            "roomType": "A/C",
+            "roomPrice": "4500",
+            "patients": [],
+            "roomId": "A/C1"
+          },
+          {
+            "status": "open",
+            "roomType": "A/C",
+            "roomPrice": "4500",
+            "patients": [],
+            "roomId": "A/C2"
+          },
+          {
+            "status": "occupied",
+            "roomType": "Luxurious",
+            "roomPrice": "5433",
+            "patients": [],
+            "roomId": "Luxurious1"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "5433",
+            "patients": [],
+            "roomId": "Luxurious2"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "1",
+            "patients": [],
+            "roomId": "Luxurious3"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "1",
+            "patients": [],
+            "roomId": "Luxurious4"
+          },
+          {
+            "status": "open",
+            "roomType": "Luxurious",
+            "roomPrice": "1",
+            "patients": [],
+            "roomId": "Luxurious5"
+          }
+        ],
+        "id": 3
+      }
+    ],
+    "admins": [
+      "vigneshvarikolu133@gmail.com"
+    ],
+    "hospitals": [
+      {
+        "hospitalName": "Yashoda",
+        "image": "https://medgatetoday.com/wp-content/uploads/2021/08/Yashoda-Hospitals.jpg",
+        "area": "Jubilee Hills",
+        "reviews": [],
+        "bedTypes": [
+          {
+            "bedType": "general",
+            "price": "2400"
+          },
+          {
+            "bedType": "icu",
+            "price": "5000"
+          },
+          {
+            "bedType": "luxury",
+            "price": "7599"
+          },
+          {
+            "bedType": "suit",
+            "price": "9000"
+          }
+        ],
+        "beds": [
+          {
+            "bedStatus": "open",
+            "bedtype": "general",
+            "bedPrice": "2500",
+            "patients": [],
+            "bedId": "general1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "general",
+            "bedPrice": "2500",
+            "patients": [
+              {
+                "email": "vigneshvarikolu111@gmail.com",
+                "name": "Varikolu Vignesh",
+                "status": "discharged"
+              }
+            ],
+            "bedId": "general2"
+          },
+          {
+            "bedStatus": "occupied",
+            "bedtype": "icu",
+            "bedPrice": "5499",
+            "patients": [
+              {
+                "name": "Vignesh",
+                "mobile": "6303389812",
+                "status": "ongoing"
+              }
+            ],
+            "bedId": "icu1"
+          },
+          {
+            "bedStatus": "occupied",
+            "bedtype": "icu",
+            "bedPrice": "5499",
+            "patients": [
+              {
+                "email": "vigneshvarikolu111@gmail.com",
+                "name": "Varikolu Vignesh",
+                "status": "ongoing"
+              }
+            ],
+            "bedId": "icu2"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "icu",
+            "bedPrice": "5499",
+            "patients": [
+              {
+                "email": "vigneshvarikolu111@gmail.com",
+                "name": "Varikolu Vignesh",
+                "status": "discharged"
+              }
+            ],
+            "bedId": "icu3"
+          },
+          {
+            "bedStatus": "occupied",
+            "bedtype": "suit",
+            "bedPrice": "9000",
+            "patients": [
+              {
+                "email": "vigneshvarikolu111@gmail.com",
+                "name": "Varikolu Vignesh",
+                "status": "ongoing"
+              }
+            ],
+            "bedId": "suit1"
+          }
+        ],
+        "id": 1
+      },
+      {
+        "hospitalName": "Kims",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a6/KIMS_Main_Logo_Col-01.jpg",
+        "area": "Begumpet",
+        "reviews": [],
+        "bedTypes": [
+          {
+            "bedType": "icu",
+            "price": "8767"
+          },
+          {
+            "bedType": "general",
+            "price": "4567"
+          },
+          {
+            "bedType": "suit",
+            "price": "10000"
+          },
+          {
+            "bedType": "firstclass",
+            "price": "7654"
+          }
+        ],
+        "beds": [
+          {
+            "bedStatus": "open",
+            "bedtype": "icu",
+            "bedPrice": "4567",
+            "patients": [],
+            "bedId": "icu1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "icu",
+            "bedPrice": "4567",
+            "patients": [],
+            "bedId": "icu2"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "general",
+            "bedPrice": "2345",
+            "patients": [],
+            "bedId": "general1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "general",
+            "bedPrice": "2345",
+            "patients": [],
+            "bedId": "general2"
+          },
+          {
+            "bedStatus": "occupied",
+            "bedtype": "general",
+            "bedPrice": "2345",
+            "patients": [
+              {
+                "email": "vigneshvarikolu111@gmail.com",
+                "name": "Varikolu Vignesh",
+                "status": "ongoing"
+              }
+            ],
+            "bedId": "general3"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "suit",
+            "bedPrice": "9876",
+            "patients": [],
+            "bedId": "suit1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "firstclass",
+            "bedPrice": "5678",
+            "patients": [],
+            "bedId": "firstclass1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "firstclass",
+            "bedPrice": "5678",
+            "patients": [],
+            "bedId": "firstclass2"
+          }
+        ],
+        "id": 2
+      },
+      {
+        "hospitalName": "Apollo",
+        "image": "data:image/png;base64,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",
+        "area": "Jubilee Hills",
+        "reviews": [],
+        "bedTypes": [
+          {
+            "bedType": "general",
+            "price": "2341"
+          },
+          {
+            "bedType": "icu",
+            "price": "3341"
+          },
+          {
+            "bedType": "firstclass",
+            "price": "4567"
+          }
+        ],
+        "beds": [
+          {
+            "bedStatus": "occupied",
+            "bedtype": "general",
+            "bedPrice": "2345",
+            "patients": [
+              {
+                "name": "Uppi",
+                "mobile": "345678678",
+                "status": "discharged"
+              },
+              {
+                "name": "Vamsi",
+                "mobile": "9876534567",
+                "status": "ongoing"
+              }
+            ],
+            "bedId": "general1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "icu",
+            "bedPrice": "4345",
+            "patients": [],
+            "bedId": "icu1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "icu",
+            "bedPrice": "4345",
+            "patients": [],
+            "bedId": "icu2"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "icu",
+            "bedPrice": "4345",
+            "patients": [],
+            "bedId": "icu3"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "firstclass",
+            "bedPrice": "6543",
+            "patients": [],
+            "bedId": "firstclass1"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "firstclass",
+            "bedPrice": "6543",
+            "patients": [],
+            "bedId": "firstclass2"
+          },
+          {
+            "bedStatus": "occupied",
+            "bedtype": "firstclass",
+            "bedPrice": "6543",
+            "patients": [
+              {
+                "email": "vigneshvarikolu111@gmail.com",
+                "name": "Vignesh",
+                "status": "ongoing"
+              }
+            ],
+            "bedId": "firstclass3"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "firstclass",
+            "bedPrice": "6543",
+            "patients": [],
+            "bedId": "firstclass4"
+          },
+          {
+            "bedStatus": "open",
+            "bedtype": "firstclass",
+            "bedPrice": "6543",
+            "patients": [],
+            "bedId": "firstclass5"
+          }
+        ],
+        "id": 3
+      }
+    ]
+  }
